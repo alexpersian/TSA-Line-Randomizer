@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Left View Controller-->
+        <scene sceneID="w0H-j3-7lm">
+            <objects>
+                <viewController id="OZQ-kI-BOI" userLabel="Left View Controller" customClass="LeftViewController" customModule="TSARandomizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Uz8-Uz-GN0"/>
+                        <viewControllerLayoutGuide type="bottom" id="U6a-4h-If1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8lL-lq-Ykb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ClM-bg-myb">
+                                <rect key="frame" x="125" y="140" width="350" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="6H1-PH-UxP"/>
+                                    <constraint firstAttribute="width" secondItem="ClM-bg-myb" secondAttribute="height" multiplier="35:32" id="uOn-TZ-Zw6"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go to the left into the security line." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8do-9j-YhA">
+                                <rect key="frame" x="168" y="468" width="264" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30659595131874084" green="0.37964802980422974" blue="0.43427985906600952" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ClM-bg-myb" firstAttribute="centerX" secondItem="8lL-lq-Ykb" secondAttribute="centerX" id="7l0-5w-Vat"/>
+                            <constraint firstItem="8do-9j-YhA" firstAttribute="centerX" secondItem="8lL-lq-Ykb" secondAttribute="centerX" id="9Hf-9L-0vo"/>
+                            <constraint firstItem="ClM-bg-myb" firstAttribute="centerY" secondItem="8lL-lq-Ykb" secondAttribute="centerY" id="TIU-Iw-h4A"/>
+                            <constraint firstItem="8do-9j-YhA" firstAttribute="top" secondItem="ClM-bg-myb" secondAttribute="bottom" constant="8" id="XJ8-ty-WbY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="ZMk-E0-aMs" kind="unwind" identifier="returnToHomeSegue" unwindAction="returnToHomeViewController:" id="Nbb-la-XqQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TfB-l0-i2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ZMk-E0-aMs" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-124" y="1161"/>
+        </scene>
+        <!--Right View Controller-->
+        <scene sceneID="NAb-Xl-uUE">
+            <objects>
+                <viewController id="8dh-pd-XCZ" userLabel="Right View Controller" customClass="RightViewController" customModule="TSARandomizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r5s-gM-bdk"/>
+                        <viewControllerLayoutGuide type="bottom" id="bUd-Wm-TIz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nIZ-Qf-bsQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="dDf-Ft-8UU">
+                                <rect key="frame" x="125" y="140" width="350" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dDf-Ft-8UU" secondAttribute="height" multiplier="35:32" id="NAP-eG-fbJ"/>
+                                    <constraint firstAttribute="width" constant="350" id="Tby-py-sbb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go to the right into the security line." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHM-Dj-bqM">
+                                <rect key="frame" x="163" y="468" width="275" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30659595131874084" green="0.37964802980422974" blue="0.43427985906600952" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dDf-Ft-8UU" firstAttribute="centerX" secondItem="nIZ-Qf-bsQ" secondAttribute="centerX" id="ONX-jV-4ux"/>
+                            <constraint firstItem="wHM-Dj-bqM" firstAttribute="top" secondItem="dDf-Ft-8UU" secondAttribute="bottom" constant="8" id="XgJ-97-DuM"/>
+                            <constraint firstItem="dDf-Ft-8UU" firstAttribute="centerY" secondItem="nIZ-Qf-bsQ" secondAttribute="centerY" id="gCg-eq-xsK"/>
+                            <constraint firstItem="wHM-Dj-bqM" firstAttribute="centerX" secondItem="nIZ-Qf-bsQ" secondAttribute="centerX" id="wRt-N9-8O0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="29G-qj-gMu" kind="unwind" identifier="returnToHomeSegue" unwindAction="returnToHomeViewController:" id="UwR-7I-n06"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="onb-CE-zmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="29G-qj-gMu" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="624" y="1161"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="Home View Controller" customClass="HomeViewController" customModule="TSARandomizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4R-3y-SpP">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.64017963409423828" green="0.68061727285385132" blue="0.71091991662979126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="T7c-ub-3wK"/>
+                                    <constraint firstAttribute="width" secondItem="Y4R-3y-SpP" secondAttribute="height" multiplier="1:1" id="elZ-mJ-Di1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Press Me Good">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5tY-CZ-x3i"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the button and then follow the arrow to your designated security checkpoint lineline." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPB-XZ-2x6">
+                                <rect key="frame" x="150" y="28" width="300" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xPB-XZ-2x6" secondAttribute="height" multiplier="391:59" constant="-362.71186440677968" id="AJK-uE-nj3"/>
+                                    <constraint firstAttribute="width" constant="300" id="b9L-yZ-lwj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30659595131874084" green="0.37964802980422974" blue="0.43427985906600952" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Y4R-3y-SpP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Dg-5E-tCl"/>
+                            <constraint firstItem="Y4R-3y-SpP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="T9b-sz-O1a"/>
+                            <constraint firstItem="xPB-XZ-2x6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wg5-8A-umS"/>
+                            <constraint firstItem="xPB-XZ-2x6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="xpK-0D-ZI8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pressMeButton" destination="Y4R-3y-SpP" id="8GP-vg-jFz"/>
+                        <segue destination="OZQ-kI-BOI" kind="show" identifier="leftViewControllerSegue" id="u0J-xq-zox"/>
+                        <segue destination="8dh-pd-XCZ" kind="show" identifier="rightViewControllerSegue" id="nY4-Ze-DRV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="250" y="359"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="left_arrow" width="323" height="299"/>
+        <image name="right_arrow" width="323" height="299"/>
+    </resources>
+</document>
