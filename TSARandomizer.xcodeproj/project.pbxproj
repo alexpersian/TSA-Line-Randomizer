@@ -16,6 +16,7 @@
 		EAD8EDE21CB3844900AD54E7 /* TSARandomizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8EDE11CB3844900AD54E7 /* TSARandomizerUITests.swift */; };
 		EAD8EDF01CB384EF00AD54E7 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8EDEF1CB384EF00AD54E7 /* LeftViewController.swift */; };
 		EAD8EDF21CB384F600AD54E7 /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8EDF11CB384F600AD54E7 /* RightViewController.swift */; };
+		EAD8EDF41CB3FA3400AD54E7 /* UpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8EDF31CB3FA3400AD54E7 /* UpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		EAD8EDE31CB3844900AD54E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAD8EDEF1CB384EF00AD54E7 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		EAD8EDF11CB384F600AD54E7 /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
+		EAD8EDF31CB3FA3400AD54E7 /* UpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				EAD8EDC31CB3844900AD54E7 /* HomeViewController.swift */,
 				EAD8EDEF1CB384EF00AD54E7 /* LeftViewController.swift */,
 				EAD8EDF11CB384F600AD54E7 /* RightViewController.swift */,
+				EAD8EDF31CB3FA3400AD54E7 /* UpViewController.swift */,
 				EAD8EDC51CB3844900AD54E7 /* Main.storyboard */,
 				EAD8EDC81CB3844900AD54E7 /* Assets.xcassets */,
 				EAD8EDCA1CB3844900AD54E7 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 				EAD8EDF01CB384EF00AD54E7 /* LeftViewController.swift in Sources */,
 				EAD8EDF21CB384F600AD54E7 /* RightViewController.swift in Sources */,
 				EAD8EDC41CB3844900AD54E7 /* HomeViewController.swift in Sources */,
+				EAD8EDF41CB3FA3400AD54E7 /* UpViewController.swift in Sources */,
 				EAD8EDC21CB3844900AD54E7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +496,7 @@
 				EAD8EDE81CB3844900AD54E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAD8EDE91CB3844900AD54E7 /* Build configuration list for PBXNativeTarget "TSARandomizerTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +505,7 @@
 				EAD8EDEB1CB3844900AD54E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAD8EDEC1CB3844900AD54E7 /* Build configuration list for PBXNativeTarget "TSARandomizerUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +514,7 @@
 				EAD8EDEE1CB3844900AD54E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

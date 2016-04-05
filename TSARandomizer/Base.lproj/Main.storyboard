@@ -92,6 +92,49 @@
             </objects>
             <point key="canvasLocation" x="624" y="1161"/>
         </scene>
+        <!--Up View Controller-->
+        <scene sceneID="lxx-fN-hDZ">
+            <objects>
+                <viewController id="2rN-VK-znH" userLabel="Up View Controller" customClass="UpViewController" customModule="TSARandomizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gHN-fH-3fh"/>
+                        <viewControllerLayoutGuide type="bottom" id="TlC-tH-8e2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jDi-1l-aeK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="kfx-5f-5h1">
+                                <rect key="frame" x="140" y="125" width="320" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="kCh-26-zJw"/>
+                                    <constraint firstAttribute="width" secondItem="kfx-5f-5h1" secondAttribute="height" multiplier="32:35" id="l2d-OY-H5E"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please step aside sir/ma'am." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMb-nx-C63">
+                                <rect key="frame" x="192" y="483" width="217" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30659595131874084" green="0.37964802980422974" blue="0.43427985906600952" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kfx-5f-5h1" firstAttribute="centerX" secondItem="jDi-1l-aeK" secondAttribute="centerX" id="2qo-zv-EkA"/>
+                            <constraint firstItem="pMb-nx-C63" firstAttribute="centerX" secondItem="jDi-1l-aeK" secondAttribute="centerX" id="cm0-zJ-hRZ"/>
+                            <constraint firstItem="kfx-5f-5h1" firstAttribute="centerY" secondItem="jDi-1l-aeK" secondAttribute="centerY" id="nQs-Yk-T5p"/>
+                            <constraint firstItem="pMb-nx-C63" firstAttribute="top" secondItem="kfx-5f-5h1" secondAttribute="bottom" constant="8" id="uBv-IC-jEq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="Yce-p7-0AY" kind="unwind" identifier="returnToHomeSegue" unwindAction="returnToHomeViewController:" id="o9l-Jf-PNY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0h-m0-vuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Yce-p7-0AY" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="250" y="-361"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -142,6 +185,7 @@
                         <outlet property="pressMeButton" destination="Y4R-3y-SpP" id="8GP-vg-jFz"/>
                         <segue destination="OZQ-kI-BOI" kind="show" identifier="leftViewControllerSegue" id="u0J-xq-zox"/>
                         <segue destination="8dh-pd-XCZ" kind="show" identifier="rightViewControllerSegue" id="nY4-Ze-DRV"/>
+                        <segue destination="2rN-VK-znH" kind="show" identifier="upViewControllerSegue" id="Bj8-xe-lRA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -152,5 +196,6 @@
     <resources>
         <image name="left_arrow" width="323" height="299"/>
         <image name="right_arrow" width="323" height="299"/>
+        <image name="up_arrow" width="298" height="323"/>
     </resources>
 </document>
