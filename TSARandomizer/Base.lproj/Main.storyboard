@@ -6,10 +6,10 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Left View Controller-->
+        <!--Direction View Controller-->
         <scene sceneID="w0H-j3-7lm">
             <objects>
-                <viewController id="OZQ-kI-BOI" userLabel="Left View Controller" customClass="LeftViewController" customModule="TSARandomizer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OZQ-kI-BOI" userLabel="Direction View Controller" customClass="DirectionViewController" customModule="TSARandomizer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Uz8-Uz-GN0"/>
                         <viewControllerLayoutGuide type="bottom" id="U6a-4h-If1"/>
@@ -18,16 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ClM-bg-myb">
-                                <rect key="frame" x="125" y="140" width="350" height="320"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ClM-bg-myb">
+                                <rect key="frame" x="125" y="125" width="350" height="350"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="6H1-PH-UxP"/>
-                                    <constraint firstAttribute="width" secondItem="ClM-bg-myb" secondAttribute="height" multiplier="35:32" id="uOn-TZ-Zw6"/>
+                                    <constraint firstAttribute="width" secondItem="ClM-bg-myb" secondAttribute="height" multiplier="35:32" constant="-32.8125" id="uOn-TZ-Zw6"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go to the left into the security line." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8do-9j-YhA">
-                                <rect key="frame" x="168" y="468" width="264" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BLAH BLAH BLAH BLAH BLAH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8do-9j-YhA">
+                                <rect key="frame" x="125" y="483" width="350" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="EVF-fN-Dun"/>
+                                    <constraint firstAttribute="width" secondItem="8do-9j-YhA" secondAttribute="height" multiplier="35:3" id="qf9-Pq-MTo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -41,99 +45,15 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="directionArrow" destination="ClM-bg-myb" id="7bK-6j-MPh"/>
+                        <outlet property="directionText" destination="8do-9j-YhA" id="kHZ-Sl-dPd"/>
                         <segue destination="ZMk-E0-aMs" kind="unwind" identifier="returnToHomeSegue" unwindAction="returnToHomeViewController:" id="Nbb-la-XqQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TfB-l0-i2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ZMk-E0-aMs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-124" y="1161"/>
-        </scene>
-        <!--Right View Controller-->
-        <scene sceneID="NAb-Xl-uUE">
-            <objects>
-                <viewController id="8dh-pd-XCZ" userLabel="Right View Controller" customClass="RightViewController" customModule="TSARandomizer" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="r5s-gM-bdk"/>
-                        <viewControllerLayoutGuide type="bottom" id="bUd-Wm-TIz"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="nIZ-Qf-bsQ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="dDf-Ft-8UU">
-                                <rect key="frame" x="125" y="140" width="350" height="320"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="dDf-Ft-8UU" secondAttribute="height" multiplier="35:32" id="NAP-eG-fbJ"/>
-                                    <constraint firstAttribute="width" constant="350" id="Tby-py-sbb"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go to the right into the security line." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHM-Dj-bqM">
-                                <rect key="frame" x="163" y="468" width="275" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.30659595131874084" green="0.37964802980422974" blue="0.43427985906600952" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="dDf-Ft-8UU" firstAttribute="centerX" secondItem="nIZ-Qf-bsQ" secondAttribute="centerX" id="ONX-jV-4ux"/>
-                            <constraint firstItem="wHM-Dj-bqM" firstAttribute="top" secondItem="dDf-Ft-8UU" secondAttribute="bottom" constant="8" id="XgJ-97-DuM"/>
-                            <constraint firstItem="dDf-Ft-8UU" firstAttribute="centerY" secondItem="nIZ-Qf-bsQ" secondAttribute="centerY" id="gCg-eq-xsK"/>
-                            <constraint firstItem="wHM-Dj-bqM" firstAttribute="centerX" secondItem="nIZ-Qf-bsQ" secondAttribute="centerX" id="wRt-N9-8O0"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <segue destination="29G-qj-gMu" kind="unwind" identifier="returnToHomeSegue" unwindAction="returnToHomeViewController:" id="UwR-7I-n06"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="onb-CE-zmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="29G-qj-gMu" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="624" y="1161"/>
-        </scene>
-        <!--Up View Controller-->
-        <scene sceneID="lxx-fN-hDZ">
-            <objects>
-                <viewController id="2rN-VK-znH" userLabel="Up View Controller" customClass="UpViewController" customModule="TSARandomizer" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gHN-fH-3fh"/>
-                        <viewControllerLayoutGuide type="bottom" id="TlC-tH-8e2"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jDi-1l-aeK">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="kfx-5f-5h1">
-                                <rect key="frame" x="140" y="125" width="320" height="350"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="kCh-26-zJw"/>
-                                    <constraint firstAttribute="width" secondItem="kfx-5f-5h1" secondAttribute="height" multiplier="32:35" id="l2d-OY-H5E"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please step aside sir/ma'am." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMb-nx-C63">
-                                <rect key="frame" x="192" y="483" width="217" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.30659595131874084" green="0.37964802980422974" blue="0.43427985906600952" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="kfx-5f-5h1" firstAttribute="centerX" secondItem="jDi-1l-aeK" secondAttribute="centerX" id="2qo-zv-EkA"/>
-                            <constraint firstItem="pMb-nx-C63" firstAttribute="centerX" secondItem="jDi-1l-aeK" secondAttribute="centerX" id="cm0-zJ-hRZ"/>
-                            <constraint firstItem="kfx-5f-5h1" firstAttribute="centerY" secondItem="jDi-1l-aeK" secondAttribute="centerY" id="nQs-Yk-T5p"/>
-                            <constraint firstItem="pMb-nx-C63" firstAttribute="top" secondItem="kfx-5f-5h1" secondAttribute="bottom" constant="8" id="uBv-IC-jEq"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <segue destination="Yce-p7-0AY" kind="unwind" identifier="returnToHomeSegue" unwindAction="returnToHomeViewController:" id="o9l-Jf-PNY"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b0h-m0-vuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Yce-p7-0AY" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="250" y="-361"/>
+            <point key="canvasLocation" x="250" y="1093"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -147,21 +67,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4R-3y-SpP">
-                                <rect key="frame" x="200" y="200" width="200" height="200"/>
-                                <color key="backgroundColor" red="0.64017963409423828" green="0.68061727285385132" blue="0.71091991662979126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="T7c-ub-3wK"/>
-                                    <constraint firstAttribute="width" secondItem="Y4R-3y-SpP" secondAttribute="height" multiplier="1:1" id="elZ-mJ-Di1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" title="Press Me Good">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5tY-CZ-x3i"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the button and then follow the arrow to your designated security checkpoint line." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPB-XZ-2x6">
                                 <rect key="frame" x="150" y="28" width="300" height="100"/>
                                 <constraints>
@@ -172,6 +77,21 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4R-3y-SpP">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.64017963409423828" green="0.68061727285385132" blue="0.71091991662979126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="T7c-ub-3wK"/>
+                                    <constraint firstAttribute="width" secondItem="Y4R-3y-SpP" secondAttribute="height" multiplier="1:1" id="elZ-mJ-Di1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Touch Me">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5tY-CZ-x3i"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.30659595131874084" green="0.37964802980422974" blue="0.43427985906600952" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -183,9 +103,7 @@
                     </view>
                     <connections>
                         <outlet property="pressMeButton" destination="Y4R-3y-SpP" id="8GP-vg-jFz"/>
-                        <segue destination="OZQ-kI-BOI" kind="show" identifier="leftViewControllerSegue" id="u0J-xq-zox"/>
-                        <segue destination="8dh-pd-XCZ" kind="show" identifier="rightViewControllerSegue" id="nY4-Ze-DRV"/>
-                        <segue destination="2rN-VK-znH" kind="show" identifier="upViewControllerSegue" id="Bj8-xe-lRA"/>
+                        <segue destination="OZQ-kI-BOI" kind="show" identifier="directionViewControllerSegue" id="u0J-xq-zox"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -194,8 +112,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="left_arrow" width="323" height="299"/>
-        <image name="right_arrow" width="323" height="299"/>
         <image name="up_arrow" width="298" height="323"/>
     </resources>
 </document>
