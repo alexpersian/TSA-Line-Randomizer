@@ -162,7 +162,7 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5tY-CZ-x3i"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the button and then follow the arrow to your designated security checkpoint lineline." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPB-XZ-2x6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the button and then follow the arrow to your designated security checkpoint line." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPB-XZ-2x6">
                                 <rect key="frame" x="150" y="28" width="300" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xPB-XZ-2x6" secondAttribute="height" multiplier="391:59" constant="-362.71186440677968" id="AJK-uE-nj3"/>
